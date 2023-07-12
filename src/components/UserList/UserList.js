@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import styles from './UserList.module.scss'
 
 export default function UserList() {
     const [users, setUsers] = useState([])
@@ -11,7 +12,7 @@ export default function UserList() {
     }, [])
 
     return (
-        <section>
+        <section className={styles.userContainer}>
             <ul>
                 {users.map((user) => {
                     return (
